@@ -1,0 +1,204 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hot Beverage Selection"
+        android:textSize="28sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <GridLayout
+        android:id="@+id/grid_hot_beverage_items"
+        android:layout_width="1035dp"
+        android:layout_height="474dp"
+        android:layout_above="@+id/button_back"
+        android:layout_marginBottom="-9dp"
+        android:columnCount="3"
+        android:gravity="center"
+        android:padding="4dp"
+        android:rowCount="4">
+
+        <Button
+            android:id="@+id/button_hot_beverage_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF0000"
+            android:padding="16dp"
+            android:text="Tea - €0.60"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_hot_beverage_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF0000"
+            android:padding="16dp"
+            android:text="Coffee - €0.60"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_hot_beverage_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF0000"
+            android:padding="16dp"
+            android:text="Cappuccino - €1.50"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_hot_beverage_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF0000"
+            android:padding="16dp"
+            android:text="Espresso - €1"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_hot_beverage_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF0000"
+            android:padding="16dp"
+            android:text="Americano - €1.50"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_hot_beverage_6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF0000"
+            android:padding="16dp"
+            android:text="Latte - €1.50"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_hot_beverage_7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF0000"
+            android:padding="16dp"
+            android:text="Hot Choclate - €2.00"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_hot_beverage_8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF0000"
+            android:padding="16dp"
+            android:text="N/A - €N/A"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_hot_beverage_9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF0000"
+            android:padding="16dp"
+            android:text="N/A - €N/A"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_hot_beverage_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF0000"
+            android:padding="16dp"
+            android:text="N/A - €N/A"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_hot_beverage_11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF0000"
+            android:padding="16dp"
+            android:text="N/A - €N/A"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_hot_beverage_12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FF0000"
+            android:padding="16dp"
+            android:text="N/A - €N/A"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_alignParentEnd="true"
+        android:background="#424242"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/text_total"
+            android:layout_width="162dp"
+            android:layout_height="632dp"
+            android:layout_marginBottom="16dp"
+            android:text="TOTAL: €0.00"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="1031dp"
+        android:layout_height="85dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="#FF9800"
+        android:padding="16dp"
+        android:text="Back"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+</RelativeLayout>
