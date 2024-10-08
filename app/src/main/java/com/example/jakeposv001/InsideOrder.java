@@ -54,6 +54,14 @@ public class InsideOrder {
         extraProdCount = 0;
     }
 
+    public void deleteProduct(String productName){
+        int index = Items.indexOf(productName);
+        if (index != -1) {
+            Prices.remove(index); // Remove price at the same index
+            Items.remove(index);   // Remove the item at the same index
+        }
+    }
+
     public void updateAllTotals(TextView SidePanel){
         double totalPrice = 0.00;
         String text = "";
@@ -64,7 +72,6 @@ public class InsideOrder {
         for (int i = 0; i<Prices.size();i++){
             text += Items.get(i) + " - €"+ Prices.get(i) + "\n";
         }
-
 
         SidePanel.setText("TOTAL: €" + String.format("%.2f", totalPrice) +"\n"+text);
     }

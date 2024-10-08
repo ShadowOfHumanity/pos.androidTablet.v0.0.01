@@ -5,100 +5,42 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Main Content Section -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal"
-        android:padding="16dp">
+        android:orientation="horizontal">
 
-        <!-- Product Selection Area -->
+        <!-- Left side: GridLayout for dynamically added buttons -->
         <GridLayout
+            android:id="@+id/grid_layout_buttons"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:columnCount="2"
             android:padding="4dp"
-            android:rowCount="3">
+            android:rowCount="3"/>
 
-            <!-- Example Products -->
-            <Button
-                android:id="@+id/product1"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:backgroundTint="#2196F3"
-                android:text="Product 1"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/product2"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:backgroundTint="#FF9800"
-                android:text="Product 2"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/product3"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:backgroundTint="#9C27B0"
-                android:text="Product 3"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/product4"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:backgroundTint="#F44336"
-                android:text="Product 4"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/product5"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:backgroundTint="#4CAF50"
-                android:text="Product 5"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-        </GridLayout>
-
-        <!-- Enlarged Right Panel -->
+        <!-- Right side: Panel with total and other content -->
         <LinearLayout
             android:layout_width="200dp"
             android:layout_height="match_parent"
             android:layout_marginStart="16dp"
             android:background="#424242"
             android:padding="16dp"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/text_total"
-                android:layout_width="162dp"
-                android:layout_height="632dp"
+                android:layout_width="184dp"
+                android:layout_height="627dp"
+                android:padding="10dp"
                 android:text="TOTAL: €0.00"
                 android:textColor="#FFFFFF"
-                android:textSize="26sp"
-                android:layout_marginBottom="16dp"
-                android:padding="10dp" />
+                android:textSize="20sp" />
 
-            <!-- Confirm Void Button -->
+            <!-- Additional content for the right panel can be added here -->
 
         </LinearLayout>
     </LinearLayout>
