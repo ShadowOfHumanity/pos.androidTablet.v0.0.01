@@ -13,11 +13,13 @@ public class InsideOrder {
     private ArrayList<String> Prices;
     private int extraProdCount;
 
+
     // Step 2: Make the constructor private to prevent external instantiation
     private InsideOrder() {
         Items = new ArrayList<>();
         Prices = new ArrayList<>();
         extraProdCount = 0;
+
     }
 
     // Step 3: Provide a public method to get the single instance
@@ -60,6 +62,15 @@ public class InsideOrder {
             Prices.remove(index); // Remove price at the same index
             Items.remove(index);   // Remove the item at the same index
         }
+    }
+
+    public String getTotalPrice(){
+        double totalPrice = 0.00;
+        String text = "";
+        for (String price : Prices){
+            totalPrice+=Double.parseDouble(price);
+        }
+        return ("Total Amount: €" + String.format("%.2f", totalPrice));
     }
 
     public void updateAllTotals(TextView SidePanel){
