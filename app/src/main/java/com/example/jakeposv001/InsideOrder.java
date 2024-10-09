@@ -100,7 +100,13 @@ public class InsideOrder {
             Change.setText("Change To Give: €"+String.format("%.2f", -1*newTotalPrice));
             resetNewTotal();
             clearOrder();
-        } else if (newTotalPrice > 0) {
+        } else if (newTotalPrice == 0) {
+            Total.setText("Total Amount: €0");
+            Change.setText("Change To Give: €0");
+            resetNewTotal();
+            clearOrder();
+        }
+        else if (newTotalPrice > 0) {
             Total.setText("Total Amount: €" + String.format("%.2f",newTotalPrice));
             Change.setText("Change To Give: €0");
 
@@ -135,7 +141,10 @@ public class InsideOrder {
         // Remove spaces from the equation
         equation = equation.replaceAll(" ", "");
 
-        // Check if the input is a number
+        // Prepend '0' to any decimal numbers starting with a dot (e.g., ".6" becomes "0.6")
+        equation = equation.replaceAll("(?<!\\d)\\.", "0.");
+
+        // Check if the input is a number (handles negative numbers as well)
         if (equation.matches("-?\\d+(\\.\\d+)?")) { // Regular expression to check for a number
             return Double.parseDouble(equation);
         }
@@ -167,6 +176,7 @@ public class InsideOrder {
             throw new IllegalArgumentException("Invalid number format: " + ex.getMessage());
         }
     }
+
 
 
 }

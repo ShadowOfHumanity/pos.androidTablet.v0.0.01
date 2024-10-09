@@ -125,12 +125,12 @@
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/btn_end_day"
+            android:id="@+id/btn_show_statistics"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#F44336"
-            android:text="End Day"
+            android:text="Show Statistics"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
 

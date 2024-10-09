@@ -3,15 +3,25 @@ package com.example.jakeposv001;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Calendar;
 
 public class ActivityMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); // Set the layout for this activity
+        Calendar calendar = Calendar.getInstance();
 
-        // Setup button click listener for the Food button
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        int month = calendar.get(Calendar.MONTH) + 1; // Add 1 because MONTH is zero-based
+        int year = calendar.get(Calendar.YEAR);
+
+
+        TextView date = findViewById(R.id.text_date);
+        date.setText("Date: "+day + "/" + month + "/" + year);        // Setup button click listener for the Food button
         findViewById(R.id.btn_food).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
