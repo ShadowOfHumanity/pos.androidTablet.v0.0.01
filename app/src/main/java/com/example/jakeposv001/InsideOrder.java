@@ -87,22 +87,26 @@ public class InsideOrder {
             text += Items.get(i) + " - €"+ Prices.get(i) + "\n";
         }
 
-        SidePanel.setText("TOTAL: €" + String.format("%.2f", totalPrice) +"\n"+text);
+        SidePanel.setText("TOTAL: €" + String.format("%.2f", totalPrice) +"\n\n"+text);
     }
 
     public double getNewTotal(){
         return newTotalPrice;
     }
     public void updateFinishedTotal(double num, TextView Total, TextView Change){
+        DataBaseHelper dataBaseHelper = new DataBaseHelper(Total.getContext());
         newTotalPrice -= num;
         if (newTotalPrice < 0) {
             Total.setText("Total Amount: €0");
             Change.setText("Change To Give: €"+String.format("%.2f", -1*newTotalPrice));
+            if (!(Items.isEmpty()) && !(Items.size() != Prices.size()))
+            dataBaseHelper.insertOrder(Items, Prices);
             resetNewTotal();
             clearOrder();
         } else if (newTotalPrice == 0) {
             Total.setText("Total Amount: €0");
             Change.setText("Change To Give: €0");
+            dataBaseHelper.insertOrder(Items, Prices);
             resetNewTotal();
             clearOrder();
         }

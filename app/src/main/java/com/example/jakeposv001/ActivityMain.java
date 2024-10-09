@@ -18,7 +18,8 @@ public class ActivityMain extends AppCompatActivity {
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         int month = calendar.get(Calendar.MONTH) + 1; // Add 1 because MONTH is zero-based
         int year = calendar.get(Calendar.YEAR);
-
+        DataBaseHelper dataBaseHelper = new DataBaseHelper(this);
+        //dataBaseHelper.deleteAllData();
 
         TextView date = findViewById(R.id.text_date);
         date.setText("Date: "+day + "/" + month + "/" + year);        // Setup button click listener for the Food button
@@ -58,8 +59,18 @@ public class ActivityMain extends AppCompatActivity {
                 goToTodayTotalActivity(); // Call the method to navigate to the Food Activity
             }
         });
+        findViewById(R.id.btn_show_statistics).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToStatisticsActivity(); // Call the method to navigate to the Food Activity
+            }
+        });
     }
 
+    public void goToStatisticsActivity(){
+        Intent intent = new Intent(this, ActivityShowStatistics.class); // Create an intent for the new activity
+        startActivity(intent); // Start the new activity
+    }
     public void goToTodayTotalActivity(){
         Intent intent = new Intent(this, ActivityTodayTotal.class); // Create an intent for the new activity
         startActivity(intent); // Start the new activity
