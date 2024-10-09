@@ -12,6 +12,7 @@ public class InsideOrder {
     private ArrayList<String> Items;
     private ArrayList<String> Prices;
     private int extraProdCount;
+    private double newTotalPrice;
 
 
     // Step 2: Make the constructor private to prevent external instantiation
@@ -70,8 +71,10 @@ public class InsideOrder {
         for (String price : Prices){
             totalPrice+=Double.parseDouble(price);
         }
+        newTotalPrice = totalPrice;
         return ("Total Amount: €" + String.format("%.2f", totalPrice));
     }
+
 
     public void updateAllTotals(TextView SidePanel){
         double totalPrice = 0.00;
@@ -79,7 +82,7 @@ public class InsideOrder {
         for (String price : Prices){
             totalPrice+=Double.parseDouble(price);
         }
-
+        newTotalPrice = totalPrice;
         for (int i = 0; i<Prices.size();i++){
             text += Items.get(i) + " - €"+ Prices.get(i) + "\n";
         }
@@ -87,9 +90,25 @@ public class InsideOrder {
         SidePanel.setText("TOTAL: €" + String.format("%.2f", totalPrice) +"\n"+text);
     }
 
+    public double getNewTotal(){
+        return newTotalPrice;
+    }
+    public void updateFinishedTotal(double num, TextView Total, TextView Change){
+        newTotalPrice -= num;
+        if (newTotalPrice < 0) {
+            Total.setText("Total Amount: €0");
+            Change.setText("Change To Give: €"+String.format("%.2f", -1*newTotalPrice));
+            resetNewTotal();
+            clearOrder();
+        } else if (newTotalPrice > 0) {
+            Total.setText("Total Amount: €" + String.format("%.2f",newTotalPrice));
+            Change.setText("Change To Give: €0");
 
-
-
+        }
+    }
+    public void resetNewTotal(){
+        newTotalPrice = 0.00;
+    }
 
 
 
