@@ -19,7 +19,7 @@ public class ActivityMain extends AppCompatActivity {
         int month = calendar.get(Calendar.MONTH) + 1; // Add 1 because MONTH is zero-based
         int year = calendar.get(Calendar.YEAR);
         DataBaseHelper dataBaseHelper = new DataBaseHelper(this);
-        //dataBaseHelper.deleteAllData();
+//        dataBaseHelper.deleteAllData();
 
         TextView date = findViewById(R.id.text_date);
         date.setText("Date: "+day + "/" + month + "/" + year);        // Setup button click listener for the Food button

@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-10-09T14:40:54.915779200Z">
+        <DropdownSelection timestamp="2024-10-11T14:33:18.673846500Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\daria.THE_FLASH\.android\avd\Medium_Tablet_API_35.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\daria.THE_FLASH\.android\avd\JakeTablet1_API_12.avd" />
             </handle>
           </Target>
         </DropdownSelection>
