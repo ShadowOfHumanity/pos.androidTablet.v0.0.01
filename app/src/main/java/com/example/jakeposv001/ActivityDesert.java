@@ -4,89 +4,88 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ActivityFood extends AppCompatActivity {
+public class ActivityDesert extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food);
+        setContentView(R.layout.activity_desert); // Set your layout for dessert selection
 
         Button buttonBack = findViewById(R.id.button_back);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Navigate back to ActivityMain
-                Intent intent = new Intent(ActivityFood.this, ActivityMain.class);
+                Intent intent = new Intent(ActivityDesert.this, ActivityMain.class);
                 startActivity(intent);
-
+                finish(); // Optional: finish this activity to remove it from the back stack
             }
         });
-        Button FoodButton1 = findViewById(R.id.button_food_1);
-        FoodButton1.setOnClickListener(new View.OnClickListener() {
+        Button DesertButton1 = findViewById(R.id.button_desert_1);
+        DesertButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 InsideOrder insideOrder = InsideOrder.getInstance();
-                insideOrder.addData("Pastizzi", "0.70");
+                insideOrder.addData("Chocolate", "1.70");
                 updateTotal();
 
             }
         });
-        Button FoodButton2 = findViewById(R.id.button_food_2);
-        FoodButton2.setOnClickListener(new View.OnClickListener() {
+        Button DesertButton2 = findViewById(R.id.button_desert_2);
+        DesertButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 InsideOrder insideOrder = InsideOrder.getInstance();
-                insideOrder.addData("Pizza", "1.70");
+                insideOrder.addData("Cake", "1.50");
                 updateTotal();
 
             }
         });
-        Button FoodButton3 = findViewById(R.id.button_food_3);
-        FoodButton3.setOnClickListener(new View.OnClickListener() {
+        Button DesertButton3 = findViewById(R.id.button_desert_3);
+        DesertButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 InsideOrder insideOrder = InsideOrder.getInstance();
-                insideOrder.addData("Pizza (R)", "2.00");
+                insideOrder.addData("Croissant", "2.00");
                 updateTotal();
 
             }
         });
-        Button FoodButton4 = findViewById(R.id.button_food_4);
-        FoodButton4.setOnClickListener(new View.OnClickListener() {
+        Button DesertButton4 = findViewById(R.id.button_desert_4);
+        DesertButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 InsideOrder insideOrder = InsideOrder.getInstance();
-                insideOrder.addData("Wudy", "1.60");
+                insideOrder.addData("Crisps (S)", "1.00");
                 updateTotal();
 
             }
         });
-        Button FoodButton5 = findViewById(R.id.button_food_5);
-        FoodButton5.setOnClickListener(new View.OnClickListener() {
+        Button DesertButton5 = findViewById(R.id.button_desert_5);
+        DesertButton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 InsideOrder insideOrder = InsideOrder.getInstance();
-                insideOrder.addData("CHKN Pie", "2.20");
+                insideOrder.addData("Crisps (L)", "1.50");
                 updateTotal();
 
             }
         });
-        Button FoodButton6 = findViewById(R.id.button_food_6);
-        FoodButton6.setOnClickListener(new View.OnClickListener() {
+        Button DesertButton6 = findViewById(R.id.button_desert_6);
+        DesertButton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 InsideOrder insideOrder = InsideOrder.getInstance();
-                insideOrder.addData("Meat Pie", "2.20");
+                insideOrder.addData("Nuts", "1.00");
                 updateTotal();
 
             }
         });
-
-
-
     }
+
     protected void updateTotal(){
         InsideOrder insideOrder = InsideOrder.getInstance();
 

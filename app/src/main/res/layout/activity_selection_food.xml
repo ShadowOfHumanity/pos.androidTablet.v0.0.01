@@ -1,0 +1,75 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_pastizzeria"
+            android:layout_width="360dp"
+            android:layout_height="115dp"
+            android:backgroundTint="#F80070"
+            android:padding="20dp"
+            android:text="pastizzeria"
+            android:textColor="#FFFFFF"
+            android:textSize="44sp" />
+
+        <Button
+            android:id="@+id/btn_hobz"
+            android:layout_width="360dp"
+            android:layout_height="115dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#21F396"
+            android:padding="20dp"
+            android:text="hobz"
+            android:textColor="#FFFFFF"
+            android:textSize="44sp" />
+
+        <Button
+            android:id="@+id/btn_desert"
+            android:layout_width="360dp"
+            android:layout_height="115dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#9c866c"
+            android:padding="20dp"
+            android:text="desert"
+            android:textColor="#FFFFFF"
+            android:textSize="44sp" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#9E9E9E"
+            android:padding="20dp"
+            android:text="Back"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:background="#424242"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/text_total"
+            android:layout_width="162dp"
+            android:layout_height="632dp"
+            android:layout_marginBottom="16dp"
+            android:text="TOTAL: €0.00"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>

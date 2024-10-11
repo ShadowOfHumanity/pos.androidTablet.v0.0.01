@@ -92,7 +92,7 @@ public class ActivityMain extends AppCompatActivity {
         startActivity(intent); // Start the new activity
     }
     public void goToFoodActivity() {
-        Intent intent = new Intent(this, ActivityFood.class); // Create an intent for the new activity
+        Intent intent = new Intent(this, ActivitySelectionFood.class); // Create an intent for the new activity
         startActivity(intent); // Start the new activity
     }
     @Override

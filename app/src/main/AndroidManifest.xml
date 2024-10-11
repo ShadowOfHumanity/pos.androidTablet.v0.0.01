@@ -28,8 +28,11 @@
         <activity android:name=".ActivitySelectVoid" /> <!-- Remove Activity -->
         <activity android:name=".ActivityFinishOrder" /> <!-- FinishOrder Activity -->
         <activity android:name=".ActivityTodayTotal" /> <!-- FinishOrder Activity -->
-        <activity android:name=".ActivityShowStatistics" /> <!-- Food Activity -->
-        <activity android:name=".ActivityFood" /> <!-- Food Activity -->
+        <activity android:name=".ActivityShowStatistics" /> <!-- Statistics Activity -->
+        <activity android:name=".ActivityPastizzeria" /> <!-- Food Activity -->
+        <activity android:name=".ActivityHobz" /> <!-- Food Activity -->
+        <activity android:name=".ActivityDesert" /> <!-- Food Activity -->
+        <activity android:name=".ActivitySelectionFood" /> <!-- Food Activity -->
 
     </application>
 </manifest>
