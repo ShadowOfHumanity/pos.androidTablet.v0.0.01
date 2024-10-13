@@ -113,6 +113,26 @@ public class ActivityHobz extends AppCompatActivity {
 
             }
         });
+        Button FoodButton10 = findViewById(R.id.button_hobz_10);
+        FoodButton10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InsideOrder insideOrder = InsideOrder.getInstance();
+                insideOrder.addData("Brgr&Chps", "5.50");
+                updateTotal();
+
+            }
+        });
+        Button FoodButton11 = findViewById(R.id.button_hobz_11);
+        FoodButton11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InsideOrder insideOrder = InsideOrder.getInstance();
+                insideOrder.addData("Brgr(F&C)", "7.50");
+                updateTotal();
+
+            }
+        });
 
 
 
